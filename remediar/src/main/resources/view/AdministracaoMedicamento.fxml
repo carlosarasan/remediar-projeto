@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.demo2.controller.AdministracaoController">
+    <VBox spacing="10" layoutX="20" layoutY="20">
+        <Label text="Administração de Medicamentos" style="-fx-font-size: 20px;" />
+        <TextField fx:id="idPrescricaoField" promptText="ID da Prescrição"/>
+        <TextField fx:id="dataHoraField" promptText="Data e Hora (YYYY-MM-DD HH:MM)"/>
+        <TextField fx:id="responsavelField" promptText="Responsável pela Administração"/>
+        <TextField fx:id="observacaoField" promptText="Observações (ex: recusado, atrasado...)"/>
+        <Button text="Registrar" onAction="#registrarAdministracao"/>
+    </VBox>
+</AnchorPane>

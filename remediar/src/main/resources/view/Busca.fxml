@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo2.controller.BuscaController">
+    <left>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button text="Voltar" onAction="#voltarInicio" />
+        </VBox>
+    </left>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="Tela de Busca" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+            <!-- Busca de Paciente -->
+            <Label text="Buscar Paciente" style="-fx-font-size: 16px;" />
+            <HBox spacing="10">
+                <TextField fx:id="nomePacienteField" promptText="Nome do Paciente" />
+                <Button text="Buscar Nome" onAction="#buscarPacientePorNome" />
+            </HBox>
+            <HBox spacing="10">
+                <TextField fx:id="cpfField" promptText="CPF do Paciente" />
+                <Button text="Buscar CPF" onAction="#buscarPacientePorCPF" />
+            </HBox>
+
+            <!-- Busca de Medicamento -->
+            <Label text="Buscar Medicamento" style="-fx-font-size: 16px;" />
+            <HBox spacing="10">
+                <TextField fx:id="nomeMedicamentoField" promptText="Nome do Medicamento" />
+                <Button text="Buscar Nome" onAction="#buscarMedicamentoPorNome" />
+            </HBox>
+            <HBox spacing="10">
+                <TextField fx:id="finalidadeField" promptText="Finalidade" />
+                <Button text="Buscar Finalidade" onAction="#buscarMedicamentoPorFinalidade" />
+            </HBox>
+
+            <TextArea fx:id="resultadoArea" prefRowCount="12" wrapText="true" />
+        </VBox>
+    </center>
+</BorderPane>

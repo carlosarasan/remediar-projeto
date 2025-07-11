@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.demo2.controller.MedicamentoController">
+    <VBox spacing="10" layoutX="20" layoutY="20">
+        <Label text="Cadastro de Medicamento" style="-fx-font-size: 20px;" />
+        <TextField fx:id="nomeField" promptText="Nome"/>
+        <TextField fx:id="dosagemField" promptText="Dosagem"/>
+        <TextField fx:id="finalidadeField" promptText="Finalidade"/>
+        <TextField fx:id="fabricanteField" promptText="Fabricante"/>
+        <TextField fx:id="estoqueField" promptText="Quantidade em Estoque"/>
+        <Button text="Salvar" onAction="#salvarMedicamento"/>
+    </VBox>
+</AnchorPane>

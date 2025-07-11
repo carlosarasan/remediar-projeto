@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="414.0" prefWidth="386.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.controller.PrescricaoController">
+    <VBox layoutX="20" layoutY="20" spacing="10">
+        <Label style="-fx-font-size: 20px;" text="Prescrição Médica" />
+        <TextField fx:id="idPacienteField" promptText="ID do Paciente" />
+        <TextField fx:id="idMedicamentoField" promptText="ID do Medicamento" />
+        <TextField fx:id="dosagemField" promptText="Dosagem" />
+        <TextField fx:id="frequenciaField" promptText="Frequência" />
+        <TextField fx:id="horarioField" promptText="Horário" />
+        <TextField fx:id="medicoField" promptText="Médico Responsável" />
+        <Button onAction="#salvarPrescricao" text="Prescrever" />
+    </VBox>
+</AnchorPane>

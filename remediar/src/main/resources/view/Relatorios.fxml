@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.demo2.controller.RelatorioController">
+    <VBox spacing="10" layoutX="20" layoutY="20">
+        <Label text="Relatórios" style="-fx-font-size: 20px;" />
+        <TextField fx:id="pacienteIdField" promptText="ID do Paciente"/>
+        <Button text="Medicamentos do Paciente" onAction="#listarMedicamentosPaciente"/>
+        <Button text="Administrações por Paciente" onAction="#listarAdministracoesPaciente"/>
+        <Button text="Administrações por Dia" onAction="#listarAdministracoesPorDia"/>
+        <TextArea fx:id="resultadoArea" prefHeight="300" wrapText="true"/>
+    </VBox>
+</AnchorPane>

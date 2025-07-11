@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.demo2.controller.TelaLoginController">
+
+    <!-- Cartão centralizado -->
+    <VBox alignment="CENTER" layoutX="146.0" layoutY="104.0" prefHeight="267.0" prefWidth="344.0" spacing="15.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 4);">
+
+        <Label style="-fx-font-size: 20px; -fx-text-fill: #2c3e50;" text="Remediar - Login" textAlignment="CENTER" />
+
+        <TextField fx:id="loginField" prefWidth="250.0" promptText="Usuário" style="-fx-background-radius: 6; -fx-border-radius: 6;" />
+
+        <PasswordField fx:id="senhaField" prefWidth="250.0" promptText="Senha" style="-fx-background-radius: 6; -fx-border-radius: 6;" />
+
+        <Button onAction="#autenticar" prefWidth="250.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 6; -fx-cursor: hand;" text="Entrar" />
+
+        <Label fx:id="erroLabel" style="-fx-font-size: 12px;" textFill="red" />
+    </VBox>
+   <ImageView fitHeight="174.0" fitWidth="183.0" layoutX="231.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@remediar%20(1).png" />
+      </image>
+   </ImageView>
+</AnchorPane>

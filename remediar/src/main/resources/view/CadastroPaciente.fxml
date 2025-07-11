@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.demo2.controller.PacienteController">
+    <VBox spacing="10" layoutX="20" layoutY="20">
+        <Label text="Cadastro de Paciente" style="-fx-font-size: 20px;" />
+        <TextField fx:id="nomeField" promptText="Nome"/>
+        <TextField fx:id="cpfField" promptText="CPF"/>
+        <TextField fx:id="nascimentoField" promptText="Data de Nascimento (YYYY-MM-DD)"/>
+        <TextField fx:id="enderecoField" promptText="Endereço"/>
+        <TextField fx:id="telefoneField" promptText="Telefone"/>
+        <TextArea fx:id="historicoField" promptText="Histórico Clínico"/>
+        <Button text="Salvar" onAction="#salvarPaciente"/>
+    </VBox>
+</AnchorPane>
