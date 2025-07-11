@@ -21,8 +21,8 @@ Sistema de gerenciamento de medicamentos desenvolvido para a disciplina de Desen
 ## Como executar
 1. Clone o repositório
 2. Importe no IntelliJ como projeto Maven
-3. Crie o banco de dados (ainda decidindo))
-4. Rode a classe `HelloAplication.java`
+3. Crie o banco de dados (ainda decidindo o script)
+4. Rode a classe `HelloApplication.java`
 
 ## Autores
 - Carlos Daniel
