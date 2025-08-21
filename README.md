@@ -89,11 +89,11 @@ Se tudo estiver configurado corretamente, a aplicação abrirá a interface grá
 
 
 ## 👨‍💻 Autores
-- Carlos Daniel
-- André Gustavo
+- Carlos Daniel.
+- André Gustavo.
 
 ## 👨‍🏫 Professor
-- Paulo Veloso Santos
+- Paulo Veloso Santos.
 
 ---
 
@@ -101,3 +101,4 @@ Se tudo estiver configurado corretamente, a aplicação abrirá a interface grá
 - Erro de conexão com o banco: verifique usuário (`admin`), senha (`admin123`) e porta no arquivo application.properties.
 - Erro JavaFX: certifique-se de que o JavaFX SDK está instalado e configurado corretamente nas Run Configurations.
 - Projeto Maven não reconhecido: clique com botão direito no pom.xml e selecione Add as Maven Project.
+ 
