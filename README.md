@@ -87,6 +87,7 @@ Se tudo estiver configurado corretamente, a aplicação abrirá a interface grá
 
 ---
 
+
 ## 👨‍💻 Autores
 - Carlos Daniel
 - André Gustavo
