@@ -22,17 +22,24 @@ public class TelaLoginController {
         String login = loginField.getText();
         String senha = senhaField.getText();
 
+        // 🔹 Verificação de campos obrigatórios
+        if (login == null || login.trim().isEmpty() || senha == null || senha.trim().isEmpty()) {
+            erroLabel.setText("Preencha todos os campos obrigatórios.");
+            return; // Interrompe aqui, não tenta autenticar
+        }
+
         UsuarioDAO dao = new UsuarioDAO();
 
         if (dao.autenticar(login, senha)) {
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/TelaInicio.fxml")); // VERIFIQUE O CAMINHO!
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/TelaInicio.fxml")); // Ajuste o caminho se necessário
                 Scene scene = new Scene(loader.load());
                 Stage stage = new Stage();
                 stage.setScene(scene);
                 stage.setTitle("Tela Inicial");
                 stage.show();
 
+                // Fecha a janela de login
                 ((Stage) ((Node) event.getSource()).getScene().getWindow()).close();
 
             } catch (IOException e) {

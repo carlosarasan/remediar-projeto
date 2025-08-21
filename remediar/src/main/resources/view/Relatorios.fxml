@@ -1,15 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.demo2.controller.RelatorioController">
-    <VBox spacing="10" layoutX="20" layoutY="20">
-        <Label text="Relatórios" style="-fx-font-size: 20px;" />
-        <TextField fx:id="pacienteIdField" promptText="ID do Paciente"/>
-        <Button text="Medicamentos do Paciente" onAction="#listarMedicamentosPaciente"/>
-        <Button text="Administrações por Paciente" onAction="#listarAdministracoesPaciente"/>
-        <Button text="Administrações por Dia" onAction="#listarAdministracoesPorDia"/>
-        <TextArea fx:id="resultadoArea" prefHeight="300" wrapText="true"/>
-    </VBox>
-</AnchorPane>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.demo2.controller.RelatorioController"
+            prefWidth="800" prefHeight="500"
+            style="-fx-background-color: #f5f7fa;">
+
+    <top>
+        <Label text="Relatórios"
+               style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-padding: 20;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox spacing="12" alignment="CENTER">
+            <padding>
+                <Insets top="10" right="30" bottom="10" left="30"/>
+            </padding>
+
+            <TextField fx:id="pacienteField" promptText="Paciente (Nome ou CPF)" prefWidth="400"/>
+            <TextField fx:id="medicamentoField" promptText="Nome do Medicamento" prefWidth="400"/>
+            <TextField fx:id="profissionalField" promptText="Profissional Responsável" prefWidth="400"/>
+
+            <HBox spacing="10" alignment="CENTER">
+                <DatePicker fx:id="dataInicialPicker" promptText="Data Inicial"/>
+                <DatePicker fx:id="dataFinalPicker" promptText="Data Final"/>
+            </HBox>
+
+            <HBox spacing="15" alignment="CENTER">
+                <Button text="Relatório de Prescrições" onAction="#listarPrescricoesPorFiltros"
+                        style="-fx-background-color: #3498db; -fx-text-fill: white;"/>
+                <Button text="Relatório de Administrações" onAction="#listarAdministracoesPorFiltros"
+                        style="-fx-background-color: #9b59b6; -fx-text-fill: white;"/>
+                <Button text="Administrações por Dia" onAction="#listarAdministracoesPorDia"
+                        style="-fx-background-color: #34495e; -fx-text-fill: white;"/>
+                <Button text="Voltar" onAction="#voltarTelaInicial"/>
+            </HBox>
+
+            <Label fx:id="mensagemLabel" textFill="red" style="-fx-font-weight: bold;"/>
+
+            <TextArea fx:id="resultadoArea" prefHeight="220" prefWidth="700" wrapText="true"/>
+        </VBox>
+    </center>
+</BorderPane>

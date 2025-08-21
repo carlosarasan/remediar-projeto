@@ -1,15 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.demo2.controller.AdministracaoController">
-    <VBox spacing="10" layoutX="20" layoutY="20">
-        <Label text="Administração de Medicamentos" style="-fx-font-size: 20px;" />
-        <TextField fx:id="idPrescricaoField" promptText="ID da Prescrição"/>
-        <TextField fx:id="dataHoraField" promptText="Data e Hora (YYYY-MM-DD HH:MM)"/>
-        <TextField fx:id="responsavelField" promptText="Responsável pela Administração"/>
-        <TextField fx:id="observacaoField" promptText="Observações (ex: recusado, atrasado...)"/>
-        <Button text="Registrar" onAction="#registrarAdministracao"/>
-    </VBox>
-</AnchorPane>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.demo2.controller.AdministracaoController"
+            prefWidth="800" prefHeight="500"
+            style="-fx-background-color: #f5f7fa;">
+
+    <top>
+        <Label text="Administração de Medicamentos"
+               style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-padding: 20;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox spacing="12" alignment="CENTER">
+            <padding>
+                <Insets top="10" right="30" bottom="10" left="30"/>
+            </padding>
+
+            <TextField fx:id="idPrescricaoField" promptText="ID da Prescrição" prefWidth="400"/>
+            <TextField fx:id="dataHoraField" promptText="Data e Hora (YYYY-MM-DD HH:MM)" prefWidth="400"/>
+            <TextField fx:id="responsavelField" promptText="Responsável pela Administração" prefWidth="400"/>
+            <TextField fx:id="observacaoField" promptText="Observações (ex: recusado, atrasado...)" prefWidth="400"/>
+
+            <HBox spacing="15" alignment="CENTER">
+                <Button text="Registrar" onAction="#registrarAdministracao" style="-fx-background-color: #2ecc71; -fx-text-fill: white;"/>
+                <Button text="Atualizar" onAction="#atualizarAdministracao" style="-fx-background-color: #f39c12; -fx-text-fill: white;"/>
+                <Button text="Excluir" onAction="#excluirAdministracao" style="-fx-background-color: #e74c3c; -fx-text-fill: white;"/>
+                <Button text="Voltar" onAction="#voltarTelaInicial"/>
+            </HBox>
+
+            <TableView fx:id="tabelaAdministracoes" prefHeight="200" prefWidth="700">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+                    <TableColumn fx:id="colPrescricaoId" text="Prescrição" prefWidth="100"/>
+                    <TableColumn fx:id="colDataHora" text="Data/Hora" prefWidth="160"/>
+                    <TableColumn fx:id="colResponsavel" text="Responsável" prefWidth="140"/>
+                    <TableColumn fx:id="colObservacoes" text="Observações" prefWidth="200"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

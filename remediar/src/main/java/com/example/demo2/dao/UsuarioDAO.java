@@ -24,7 +24,7 @@ public class UsuarioDAO {
             stmt.setString(2, senhaHash);
 
             ResultSet rs = stmt.executeQuery();
-            return rs.next(); // Se achou usuário com login e senha -> true
+            return rs.next();
 
         } catch (SQLException e) {
             e.printStackTrace();

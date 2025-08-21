@@ -1,16 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.demo2.controller.MedicamentoController">
-    <VBox spacing="10" layoutX="20" layoutY="20">
-        <Label text="Cadastro de Medicamento" style="-fx-font-size: 20px;" />
-        <TextField fx:id="nomeField" promptText="Nome"/>
-        <TextField fx:id="dosagemField" promptText="Dosagem"/>
-        <TextField fx:id="finalidadeField" promptText="Finalidade"/>
-        <TextField fx:id="fabricanteField" promptText="Fabricante"/>
-        <TextField fx:id="estoqueField" promptText="Quantidade em Estoque"/>
-        <Button text="Salvar" onAction="#salvarMedicamento"/>
-    </VBox>
-</AnchorPane>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.demo2.controller.MedicamentoController"
+            prefWidth="800" prefHeight="500"
+            style="-fx-background-color: #f5f7fa;">
+
+    <top>
+        <Label text="Cadastro de Medicamentos"
+               style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-padding: 20;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox spacing="15" alignment="CENTER" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="10" right="30" bottom="10" left="30"/>
+            </padding>
+
+            <TextField fx:id="nomeField" promptText="Nome do Medicamento" prefWidth="400"/>
+            <TextField fx:id="dosagemField" promptText="Dosagem (ex: 500mg, 10ml)" prefWidth="400"/>
+            <TextField fx:id="finalidadeField" promptText="Finalidade" prefWidth="400"/>
+            <TextField fx:id="fabricanteField" promptText="Fabricante" prefWidth="400"/>
+            <TextField fx:id="formaAdministracaoField" promptText="Forma de Administração (comprimido, injetável...)" prefWidth="400"/>
+            <TextField fx:id="estoqueField" promptText="Quantidade em Estoque" prefWidth="400"/>
+
+            <HBox spacing="15" alignment="CENTER">
+                <Button text="Salvar" onAction="#salvarMedicamento" style="-fx-background-color: #3498db; -fx-text-fill: white;"/>
+                <Button text="Atualizar" onAction="#atualizarMedicamento" style="-fx-background-color: #f39c12; -fx-text-fill: white;"/>
+                <Button text="Excluir" onAction="#excluirMedicamento" style="-fx-background-color: #e74c3c; -fx-text-fill: white;"/>
+                <Button text="Voltar" onAction="#voltarInicio"/>
+            </HBox>
+
+            <TableView fx:id="tabelaMedicamentos" prefHeight="200" prefWidth="700">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+                    <TableColumn fx:id="colNome" text="Nome" prefWidth="120"/>
+                    <TableColumn fx:id="colDosagem" text="Dosagem" prefWidth="100"/>
+                    <TableColumn fx:id="colFinalidade" text="Finalidade" prefWidth="100"/>
+                    <TableColumn fx:id="colFabricante" text="Fabricante" prefWidth="100"/>
+                    <TableColumn fx:id="colForma" text="Administração" prefWidth="120"/>
+                    <TableColumn fx:id="colEstoque" text="Estoque" prefWidth="80"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

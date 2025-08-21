@@ -1,6 +1,5 @@
 package com.example.demo2.model;
 
-
 public class Prescricao {
     private int id;
     private int pacienteId;
@@ -8,9 +7,10 @@ public class Prescricao {
     private String dosagem;
     private String frequencia;
     private String horario;
+    private String duracao;
     private String medicoResponsavel;
 
-    // Getters e setters
+    // Getters e Setters
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
@@ -28,6 +28,9 @@ public class Prescricao {
 
     public String getHorario() { return horario; }
     public void setHorario(String horario) { this.horario = horario; }
+
+    public String getDuracao() { return duracao; }
+    public void setDuracao(String duracao) { this.duracao = duracao; }
 
     public String getMedicoResponsavel() { return medicoResponsavel; }
     public void setMedicoResponsavel(String medicoResponsavel) { this.medicoResponsavel = medicoResponsavel; }

@@ -6,21 +6,25 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <!-- TelaInicio.fxml -->
 
 <BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.controller.TelaInicioController">
     <left>
-        <VBox alignment="TOP_CENTER" prefWidth="180" spacing="15" style="-fx-background-color: #2C3E50;">
-         <ImageView fitHeight="163.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
+        <VBox alignment="TOP_CENTER" prefHeight="433.0" prefWidth="245.0" spacing="15" style="-fx-background-color: #2C3E50;">
+         <ImageView fitHeight="163.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@remediar%20(1)%20(1).png" />
             </image>
          </ImageView>
-            <Button onAction="#abrirCadastroPaciente" style="-fx-pref-width: 160;" text="Cadastro de Pacientes" />
-            <Button onAction="#abrirCadastroMedicamento" style="-fx-pref-width: 160;" text="Cadastro de Medicamentos" />
+            <Button onAction="#abrirCadastroPaciente" prefHeight="25.0" prefWidth="184.0" style="-fx-pref-width: 160;" text="Cadastro de Pacientes" />
+            <Button onAction="#abrirCadastroMedicamento" prefHeight="25.0" prefWidth="190.0" style="-fx-pref-width: 160;" text="Cadastro de Medicamentos">
+            <font>
+               <Font size="11.0" />
+            </font></Button>
             <Button onAction="#abrirPrescricao" style="-fx-pref-width: 160;" text="Prescrição Médica" />
-            <Button onAction="#abrirAdministracao" style="-fx-pref-width: 160;" text="Administração de Medicamentos" />
+            <Button onAction="#abrirAdministracao" prefHeight="27.0" prefWidth="193.0" style="-fx-pref-width: 160;" text="Administração de Medicamentos" textAlignment="JUSTIFY" />
             <Button onAction="#abrirRelatorios" style="-fx-pref-width: 160;" text="Relatórios" />
             <Button onAction="#abrirBusca" style="-fx-pref-width: 160;" text="Buscar" />
         </VBox>

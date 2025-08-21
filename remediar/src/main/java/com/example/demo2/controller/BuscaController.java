@@ -4,15 +4,15 @@ import com.example.demo2.dao.MedicamentoDAO;
 import com.example.demo2.dao.PacienteDAO;
 import com.example.demo2.model.Medicamento;
 import com.example.demo2.model.Paciente;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.scene.Node;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 
+import java.io.IOException;
 import java.util.List;
 
 public class BuscaController {
@@ -82,18 +82,23 @@ public class BuscaController {
         }
     }
 
+    // ✅ Novo método para voltar à tela inicial
     @FXML
-    public void voltarInicio(ActionEvent event) {
+    public void voltarInicio() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/TelaInicio.fxml"));
-            Stage stage = new Stage();
-            stage.setScene(new Scene(loader.load()));
-            stage.setTitle("Tela Inicial");
-            stage.show();
-
-            ((Stage) ((Node) event.getSource()).getScene().getWindow()).close();
-        } catch (Exception e) {
+            Scene scene = new Scene(loader.load());
+            Stage stage = (Stage) nomePacienteField.getScene().getWindow();
+            stage.setScene(scene);
+        } catch (IOException e) {
             e.printStackTrace();
+            mostrarAlerta(Alert.AlertType.ERROR, "Erro ao voltar para a tela inicial.");
         }
+    }
+
+    private void mostrarAlerta(Alert.AlertType tipo, String mensagem) {
+        Alert alert = new Alert(tipo);
+        alert.setContentText(mensagem);
+        alert.showAndWait();
     }
 }
