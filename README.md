@@ -63,7 +63,7 @@ ou na classe de conexão Java, caso não exista esse arquivo.
 
 ### 3. Importar no IntelliJ IDEA
 1. Abra o IntelliJ IDEA.  
-2. Vá em **File > Open** e selecione a pasta do projeto.  
+2. Vá em **File > Open** e selecione a pasta do projeto somente (remediar).  
 3. O IntelliJ deve reconhecer o projeto como **Maven Project** automaticamente.  
    - Se não reconhecer, clique com botão direito no `pom.xml` e selecione **Add as Maven Project**.
 
@@ -103,6 +103,7 @@ Se tudo estiver configurado corretamente, a aplicação abrirá a interface grá
 Coloque o usuário e a senha:
 - **Usuário:** admin  
 - **Senha:** admin123  
+
 
 ---
 
