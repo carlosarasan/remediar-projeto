@@ -30,7 +30,7 @@ O projeto permite cadastrar pacientes, medicamentos, realizar prescrições méd
 Abra o terminal e execute os comandos:
 
 ```bash
-git clone https://github.com/seu-usuario/remediar-projeto.git
+git clone https://github.com/carlosarasan/remediar-projeto.git
 cd remediar-projeto
 ```
 
@@ -63,7 +63,8 @@ ou na classe de conexão Java, caso não exista esse arquivo.
 
 ### 3. Importar no IntelliJ IDEA
 1. Abra o IntelliJ IDEA.  
-2. Vá em **File > Open** e selecione a pasta do projeto somente (remediar).  
+2. Vá em **File > Open** e selecione a pasta do projeto somente (remediar) não importe a pasta remediar-projeto e sim a pasta remediar.
+
 3. O IntelliJ deve reconhecer o projeto como **Maven Project** automaticamente.  
    - Se não reconhecer, clique com botão direito no `pom.xml` e selecione **Add as Maven Project**.
 
@@ -84,7 +85,7 @@ ou na classe de conexão Java, caso não exista esse arquivo.
 
 > **Atenção:** Substitua `caminho/do/javafx/lib` pelo caminho correto do seu JavaFX.
 
-6. Qualquer dúvida, assista a este tutorial do canal Bora Codar:  
+6. Qualquer dúvida, assista a este tutorial do canal Bora Codar - Felipe Meireles:  
 [https://youtu.be/gd9Ds86gFI0?si=ziQVu82JNEP_i2rF](https://youtu.be/gd9Ds86gFI0?si=ziQVu82JNEP_i2rF)
 
 ---
@@ -93,7 +94,7 @@ ou na classe de conexão Java, caso não exista esse arquivo.
 1. Localize a classe principal:
 
 ```
-src/main/java/com/remediar/HelloApplication.java
+HelloApplication.java
 ```
 
 2. Clique em **Run** para iniciar o sistema.

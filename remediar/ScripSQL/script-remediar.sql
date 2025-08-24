@@ -65,15 +65,5 @@ CREATE TABLE IF NOT EXISTS usuario (
 INSERT INTO usuario (login, senha_hash)
 VALUES ('admin', '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9');
 
-UPDATE paciente
-SET data_nascimento = '2021-01-01'
-WHERE data_nascimento = '210101';
 
-UPDATE paciente
-SET data_nascimento = '2021-01-01'
-WHERE data_nascimento = '210101';
-
-UPDATE paciente
-SET data_nascimento = '2021-01-01'
-WHERE data_nascimento = '21213';
 
